@@ -30,18 +30,18 @@
 /*
 {
 //计算1/1-1/2+1/3...+1/99-1/100的值；
-int i = 0;
-double sum = 0 ;
-int flag = 1;
-for (i = 1; i < 101; i++)
-{
-sum += flag * (1.0 / i);
-flag = -flag;
-}
-printf("%f\n", sum);
-return 0;
-system("pause");
-}*/
+   int i = 0;
+   double sum = 0 ;
+   int flag = 1;
+   for (i = 1; i < 101; i++)
+   {
+   sum += flag * (1.0 / i);
+   flag = -flag;
+   }
+   printf("%f\n", sum);
+   return 0;
+   system("pause");
+   }*/
 /*{
 数一下1到100的所有整数中出现多少次数字9；
 	int i = 0;
@@ -52,7 +52,7 @@ system("pause");
 		{
 			count++;
 		}
-		if (9 == i / 10)
+		if (9 == i/10)
 		{
 			count++;
 		}
