@@ -32,29 +32,29 @@
 //	return 0;
 //}
 //题目2、求出十个整数中的最大值：
-int main()
-{
-	int i = 0;
-	int a[10] = {0};
-	printf("please input ten integer :");
-	for (i=0; i<10 ;i++ )
-	{
-		scanf("%d", &a[i]);
-	}
-	for ( i = 0; i < 9; i++)
-	{
-		int t = 0;
-		if (a[i]>a[i+1])
-		{
-			t = a[i];
-			a[i] = a[i + 1];
-			a[i + 1] = t;
-		}
-	}
-	printf("The biggest integer is %d\n", a[9]);
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	int i = 0;
+//	int a[10] = {0};
+//	printf("please input ten integer :");
+//	for (i=0; i<10 ;i++ )
+//	{
+//		scanf("%d", &a[i]);
+//	}
+//	for ( i = 0; i < 9; i++)
+//	{
+//		int t = 0;
+//		if (a[i]>a[i+1])
+//		{
+//			t = a[i];
+//			a[i] = a[i + 1];
+//			a[i + 1] = t;
+//		}
+//	}
+//	printf("The biggest integer is %d\n", a[9]);
+//	system("pause");
+//	return 0;
+//}
 //题目3：将三个数按从大到小输出
 //int main()
 //{
