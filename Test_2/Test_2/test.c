@@ -16,38 +16,45 @@
 //	//a = b;
 //	//b = t;
 //	//第二种方法，不创建临时变量交换
+//// a-->1011   b-->0001
+////  a = a^b==>1010
+////  b = a^b==>1010^0001-->b=1011
+////  a = a^b==>1010^1011-->a=0001
 //	a = a^b;
 //	b = a^b;
 //	a = a^b;
 //	printf("a=%d   b=%d", a, b);
+//第三种方法：
+//  a = a + b;//a是a+b的和
+//  b = a - b;//a+b减去b的值就是前面a的值，再赋给b，这时b的值就是a的值，但a的值还不是b的值
+//  a = a - b;//再a+b减去当前b的值，也就是以前a的值，就是以前b的值，然后再赋给a，这样就实现了呼唤；	
 //	system("pause");
 //	return 0;
 //}
 //题目2、求出十个整数中的最大值：
-//int main()
-//{
-//	int i = 0;
-//	int a[10] = {0};
-//	printf("please input ten integer :");
-//	for (i=0; i<10 ;i++ )
-//	{
-//		scanf("%d", &a[i]);
-//	}
-//	for ( i = 0; i < 9; i++)
-//	{
-//		int t = 0;
-//		if (a[i]>a[i+1])
-//		{
-//			t = a[i];
-//			a[i] = a[i + 1];
-//			a[i + 1] = t;
-//		}
-//
-//	}
-//	printf("The biggest integer is %d\n", a[9]);
-//	system("pause");
-//	return 0;
-//}
+int main()
+{
+	int i = 0;
+	int a[10] = {0};
+	printf("please input ten integer :");
+	for (i=0; i<10 ;i++ )
+	{
+		scanf("%d", &a[i]);
+	}
+	for ( i = 0; i < 9; i++)
+	{
+		int t = 0;
+		if (a[i]>a[i+1])
+		{
+			t = a[i];
+			a[i] = a[i + 1];
+			a[i + 1] = t;
+		}
+	}
+	printf("The biggest integer is %d\n", a[9]);
+	system("pause");
+	return 0;
+}
 //题目3：将三个数按从大到小输出
 //int main()
 //{
@@ -81,7 +88,6 @@
 //		{
 //			printf("%d\n%d\n", c, a);
 //		}
-//
 //	}
 //	else
 //	{
