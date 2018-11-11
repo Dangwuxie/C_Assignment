@@ -30,3 +30,4 @@ int main()
 	system("pause");
 	return 0;
 }
+//2018.11.11.¸Ä
