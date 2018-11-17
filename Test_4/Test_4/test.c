@@ -94,8 +94,8 @@
 //3、求Sn=a+aa+aaa+aaaa+aaaaa的前五项的和，其中a是一个数字，
 //例如：2+22+222+2222+22222
 //分析，先求出每一项的数字，然后求其和
-//int main()
-//{
+int main()
+{
 //	int n = 0;
 //	int a = 0;
 //	printf("请分别输入要求的数以及前n项和：");
@@ -115,6 +115,25 @@
 //	}
 //	
 //	printf("前%d项和为%d\n",y, num);
-//	system("pause");
-//	return 0;
-//}
+	////第二种方法：
+	int a = 0;
+	int k = 0;
+	int sum = 0;
+	int temp = 0;
+	int i = 0;
+	scanf("%d %d", &a, &k);
+	for ( i = 0; i < k; i++)
+	{
+		//计算当前长度的数 a,aa,aaa
+		temp = temp * 10 + a;
+		sum = sum + temp;
+		printf(" %d+", temp);
+	}
+	printf("=");
+	printf("%d\n", sum);
+	int max = 0x7fffffff;
+	printf("%d\n", max);
+	system("pause");
+	return 0;
+
+}
