@@ -3,7 +3,10 @@
 //分析：斐波拉契数是1、1、2、3、5、8，就是前两个数相加
 #include <stdio.h>
 #include <stdlib.h>
+<<<<<<< HEAD
 #include <math.h>
+=======
+>>>>>>> 9fe370951a33e84b786327756749a727eb4df0dc
 //------------------------------------------------------------------
 //int Recursion(int i);
 //int main()
@@ -95,6 +98,7 @@
 //4. 编写一个函数 reverse_string(char * string)（递归实现）
 //实现：将参数字符串中的字符反向排列。
 //要求：不能使用C函数库中的字符串操作函数。
+<<<<<<< HEAD
 ////第一种方法：非递归方法反向排列：
 //int reverse_string(char * string)
 //{
@@ -256,4 +260,43 @@ int main()
 	Print(integer);
 	system("pause");
 	return 0;
+=======
+void reverse_string(char * string)
+{
+	char * str = string;
+	int len = 0;
+	int i = 0;
+	while (*(str+i) != '\0')
+	{
+		len++;	
+		i++;
+	}
+	for ( i = 0; i < len; i++)
+	{
+		char tmp = 0;
+		if (i < len/2)
+		{
+			tmp = *(str + i);
+			*(str + i) = *(str+(len - i - 1));
+			*(str + (len - i - 1)) = tmp;
+		}
+	}
+
+	for ( i = 0; i < len; i++)
+	{
+		printf("%c", *(str + i));
+	}
+	printf("\n");
+}
+int main()
+{
+	char arr[] = { 0 };
+	gets(arr);
+	/*char arr2[] = */reverse_string(arr);
+	///*int arr2 = */reverse_string(arr);
+	/*printf("倒置后的字符串为%s", arr2);*/
+	system("pause");
+	return 0;
+
+>>>>>>> 9fe370951a33e84b786327756749a727eb4df0dc
 }
