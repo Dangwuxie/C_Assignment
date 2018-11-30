@@ -26,16 +26,44 @@
 //	}
 //	return count;
 //}
-//int main()
+////////////获取n的第i位的值，n>>(i-1)&1;
+//int count_one_bits(unsigned int integer)
 //{
-//	int integer = 0;
-//	printf("Please input a integer :");
-//	scanf("%d", &integer);
-//	int count = count_one_bits(integer);
-//	printf("%d的二进制中1个数为%d个\n;", integer, count);
-//	system("pause");
-//	return 0;
+//	int i = 0;
+//	int count = 0;
+//	for ( i = 0; i < 32; i++)
+//	{
+//		if (((integer >> i) & 1) == 1)
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
 //}
+//////////////////////////////////
+int count_one_bits(unsigned int integer)
+{
+	int count = 0;
+	while (integer)
+	{
+		integer = integer&(integer - 1);//每与一次，他的二进制位少个1，将它的二进制位最低低位的1变成0；
+		count++;//计数器；
+	}
+	return count;
+}
+/////////////////
+//还可以这样：
+
+int main()
+{
+	int integer = 0;
+	printf("Please input a integer :");
+	scanf("%d", &integer);
+	//int count = count_one_bits(integer);
+	printf("%d的二进制中1个数为%d个\n;", integer, count_one_bits(integer));
+	system("pause");
+	return 0;
+}
 
 //2.获取一个数二进制序列中所有的偶数位和奇数位，
 //分别输出二进制序列。
@@ -96,25 +124,25 @@
 //输入例子 :
 //1999 2299
 //输出例子 : 7
-int main()
-{
-	int p = 0;
-	int q = 0;
-	int n = 0;
-	int count = 0;
-	printf("Please input a integer :\n");
-	scanf("%d %d", &p, &q);
-	n = p^q;
-	while (n)
-	{
-		n = n & (n - 1);
-		count++;
-	}
-	printf("不同的1的个数一共有%d个 \n", count);
-
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	int p = 0;
+//	int q = 0;
+//	int n = 0;
+//	int count = 0;
+//	printf("Please input a integer :\n");
+//	scanf("%d %d", &p, &q);
+//	n = p^q;
+//	while (n)
+//	{
+//		n = n & (n - 1);
+//		count++;
+//	}
+//	printf("不同的1的个数一共有%d个 \n", count);
+//
+//	system("pause");
+//	return 0;
+//}
 
 
 
